@@ -1,0 +1,18 @@
+# CountryCode
+
+## Enum Variants
+
+| Name | Value |
+|---- | -----|
+| Us | US |
+| Gb | GB |
+| Es | ES |
+| Nl | NL |
+| Fr | FR |
+| Ie | IE |
+| Ca | CA |
+
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
