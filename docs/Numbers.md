@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **account** | Option<**String**> | Will be used for the account number. | [optional]
-**ach_routing** | Option<**String**> | Must be a valid ACH routing number. | [optional]
+**ach_routing** | Option<**String**> | Must be a valid ACH routing number. To test `/transfer/capabilities/get`, set this to 322271627 to force a `true` result. | [optional]
 **ach_wire_routing** | Option<**String**> | Must be a valid wire transfer routing number. | [optional]
 **eft_institution** | Option<**String**> | EFT institution number. Must be specified alongside `eft_branch`. | [optional]
 **eft_branch** | Option<**String**> | EFT branch number. Must be specified alongside `eft_institution`. | [optional]

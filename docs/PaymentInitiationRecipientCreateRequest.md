@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **client_id** | Option<**String**> | Your Plaid API `client_id`. The `client_id` is required and may be provided either in the `PLAID-CLIENT-ID` header or as part of a request body. | [optional]
 **secret** | Option<**String**> | Your Plaid API `secret`. The `secret` is required and may be provided either in the `PLAID-SECRET` header or as part of a request body. | [optional]
-**name** | **String** | The name of the recipient | 
+**name** | **String** | The name of the recipient. We recommend using strings of length 18 or less and avoid special characters to ensure compatibility with all institutions. | 
 **iban** | Option<**String**> | The International Bank Account Number (IBAN) for the recipient. If BACS data is not provided, an IBAN is required. | [optional]
 **bacs** | Option<[**models::RecipientBacsNullable**](RecipientBACSNullable.md)> |  | [optional]
 **address** | Option<[**models::PaymentInitiationAddress**](PaymentInitiationAddress.md)> |  | [optional]

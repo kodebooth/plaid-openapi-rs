@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **secret** | Option<**String**> | Your Plaid API `secret`. The `secret` is required and may be provided either in the `PLAID-SECRET` header or as part of a request body. | [optional]
 **account_number** | **String** | The user's account number. | 
 **routing_number** | **String** | The user's routing number. | 
+**wire_routing_number** | Option<**String**> | The user's wire transfer routing number. This is the ABA number; for some institutions, this may differ from the ACH number used in `routing_number`. | [optional]
 **account_type** | **String** | The type of the bank account (`checking` or `savings`). | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

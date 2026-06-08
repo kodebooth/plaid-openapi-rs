@@ -15,7 +15,6 @@ Name | Type | Description | Notes
 **bank_transfer_iso_currency_code** | **String** | The currency of the bank transfer amount. | 
 **failure_reason** | Option<[**models::BankTransferFailure**](BankTransferFailure.md)> |  | 
 **direction** | Option<[**models::BankTransferDirection**](BankTransferDirection.md)> |  | 
-**receiver_details** | Option<[**models::BankTransferReceiverDetails**](BankTransferReceiverDetails.md)> |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

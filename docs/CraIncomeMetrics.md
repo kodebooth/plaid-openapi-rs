@@ -1,0 +1,14 @@
+# CraIncomeMetrics
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**current** | Option<[**models::CraCurrentModeledIncome**](CraCurrentModeledIncome.md)> |  | 
+**projected** | Option<[**models::CraProjectedModeledIncome**](CraProjectedModeledIncome.md)> |  | 
+**iso_currency_code** | Option<**String**> | The ISO 4217 currency code of the amount or balance. | 
+**unofficial_currency_code** | Option<**String**> | The unofficial currency code associated with the amount or balance. Always `null` if `iso_currency_code` is non-null. Unofficial currency codes are used for currencies that do not have official ISO currency codes, such as cryptocurrencies and the currencies of certain countries. | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

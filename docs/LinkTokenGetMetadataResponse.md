@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **webhook** | Option<**String**> | The `webhook` specified in the `/link/token/create` call. | 
 **country_codes** | [**Vec<models::CountryCode>**](CountryCode.md) | The `country_codes` specified in the `/link/token/create` call. | 
 **language** | Option<**String**> | The `language` specified in the `/link/token/create` call. | 
+**institution_data** | Option<[**models::LinkTokenCreateInstitutionData**](LinkTokenCreateInstitutionData.md)> |  | [optional]
 **account_filters** | Option<[**models::AccountFiltersResponse**](AccountFiltersResponse.md)> |  | [optional]
 **redirect_uri** | Option<**String**> | The `redirect_uri` specified in the `/link/token/create` call. | 
 **client_name** | Option<**String**> | The `client_name` specified in the `/link/token/create` call. | 

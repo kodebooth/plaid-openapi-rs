@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **String** | The description of the transaction. | 
 **amount** | **f64** | The amount of the transaction. | 
-**date** | **chrono::NaiveDate** | The date of the transaction, in ISO 8601 format (\"yyyy-mm-dd\"). | 
+**date** | **chrono::NaiveDate** | The date of the transaction, in [ISO 8601](https://wikipedia.org/wiki/ISO_8601) format (\"yyyy-mm-dd\"). | 
 **account_id** | **String** | A unique identifier for the end user's account. | 
 **transaction_id** | **String** | A unique identifier for the transaction. | 
 

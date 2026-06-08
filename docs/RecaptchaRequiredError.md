@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**error_type** | **String** | RECAPTCHA_ERROR | 
-**error_code** | **String** | RECAPTCHA_REQUIRED | 
+**error_type** | **String** | `RECAPTCHA_ERROR` | 
+**error_code** | **String** | `RECAPTCHA_REQUIRED` | 
 **display_message** | **String** |  | 
 **http_code** | **String** | 400 | 
 **link_user_experience** | **String** | Your user will be prompted to solve a Google reCAPTCHA challenge in the Link Recaptcha pane. If they solve the challenge successfully, the user's request is resubmitted and they are directed to the next Item creation step. | 

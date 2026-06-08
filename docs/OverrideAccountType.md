@@ -8,6 +8,7 @@
 | Credit | credit |
 | Depository | depository |
 | Loan | loan |
+| Payroll | payroll |
 | Other | other |
 
 

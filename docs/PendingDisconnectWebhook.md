@@ -1,0 +1,17 @@
+# PendingDisconnectWebhook
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**webhook_type** | **String** | `ITEM` | 
+**webhook_code** | **String** | `PENDING_DISCONNECT` | 
+**item_id** | **String** | The `item_id` of the Item associated with this webhook, warning, or error | 
+**user_id** | Option<**String**> | The Plaid `user_id` of the User associated with this webhook, warning, or error. | [optional]
+**reason** | [**models::PendingDisconnectWebhookReason**](PendingDisconnectWebhookReason.md) |  | 
+**disconnect_time** | **chrono::DateTime<chrono::FixedOffset>** | The date and time at which the Item is scheduled to disconnect, in [ISO 8601](https://wikipedia.org/wiki/ISO_8601) format. | 
+**environment** | [**models::WebhookEnvironmentValues**](WebhookEnvironmentValues.md) |  | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

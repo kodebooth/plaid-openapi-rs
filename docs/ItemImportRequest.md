@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **client_id** | Option<**String**> | Your Plaid API `client_id`. The `client_id` is required and may be provided either in the `PLAID-CLIENT-ID` header or as part of a request body. | [optional]
 **secret** | Option<**String**> | Your Plaid API `secret`. The `secret` is required and may be provided either in the `PLAID-SECRET` header or as part of a request body. | [optional]
+**institution_id** | Option<**String**> | The Plaid Institution ID associated with the Item. | [optional]
 **products** | [**Vec<models::Products>**](Products.md) | Array of product strings | 
 **user_auth** | [**models::ItemImportRequestUserAuth**](ItemImportRequestUserAuth.md) |  | 
 **options** | Option<[**models::ItemImportRequestOptions**](ItemImportRequestOptions.md)> |  | [optional]

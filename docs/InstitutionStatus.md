@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_logins** | [**models::ProductStatus**](ProductStatus.md) |  | 
-**transactions_updates** | [**models::ProductStatus**](ProductStatus.md) |  | 
-**auth** | [**models::ProductStatus**](ProductStatus.md) |  | 
-**balance** | [**models::ProductStatus**](ProductStatus.md) |  | 
-**identity** | [**models::ProductStatus**](ProductStatus.md) |  | 
-**investments_updates** | [**models::ProductStatus**](ProductStatus.md) |  | 
+**item_logins** | Option<[**models::ProductStatus**](ProductStatus.md)> |  | [optional]
+**transactions_updates** | Option<[**models::ProductStatus**](ProductStatus.md)> |  | [optional]
+**auth** | Option<[**models::ProductStatus**](ProductStatus.md)> |  | [optional]
+**identity** | Option<[**models::ProductStatus**](ProductStatus.md)> |  | [optional]
+**investments_updates** | Option<[**models::ProductStatus**](ProductStatus.md)> |  | [optional]
 **liabilities_updates** | Option<[**models::ProductStatus**](ProductStatus.md)> |  | [optional]
 **liabilities** | Option<[**models::ProductStatus**](ProductStatus.md)> |  | [optional]
 **investments** | Option<[**models::ProductStatus**](ProductStatus.md)> |  | [optional]

@@ -6,16 +6,24 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **payment_id** | **String** | The ID of the payment. Like all Plaid identifiers, the `payment_id` is case sensitive. | 
 **amount** | [**models::PaymentAmount**](PaymentAmount.md) |  | 
-**status** | **Status** | The status of the payment.  `PAYMENT_STATUS_INPUT_NEEDED`: This is the initial state of all payments. It indicates that the payment is waiting on user input to continue processing. A payment may re-enter this state later on if further input is needed.  `PAYMENT_STATUS_PROCESSING`: The payment is currently being processed. The payment will automatically exit this state when processing is complete.  `PAYMENT_STATUS_INITIATED`: The payment has been successfully initiated and is considered complete.  `PAYMENT_STATUS_COMPLETED`: Indicates that the standing order has been successfully established. This state is only used for standing orders.  `PAYMENT_STATUS_INSUFFICIENT_FUNDS`: The payment has failed due to insufficient funds.  `PAYMENT_STATUS_FAILED`: The payment has failed to be initiated. This error is retryable once the root cause is resolved.  `PAYMENT_STATUS_BLOCKED`: The payment has been blocked. This is a retryable error.  `PAYMENT_STATUS_UNKNOWN`: The payment status is unknown. (enum: PAYMENT_STATUS_INPUT_NEEDED, PAYMENT_STATUS_PROCESSING, PAYMENT_STATUS_INITIATED, PAYMENT_STATUS_COMPLETED, PAYMENT_STATUS_INSUFFICIENT_FUNDS, PAYMENT_STATUS_FAILED, PAYMENT_STATUS_BLOCKED, PAYMENT_STATUS_UNKNOWN) | 
+**status** | [**models::PaymentInitiationPaymentStatus**](PaymentInitiationPaymentStatus.md) |  | 
 **recipient_id** | **String** | The ID of the recipient | 
 **reference** | **String** | A reference for the payment. | 
 **adjusted_reference** | Option<**String**> | The value of the reference sent to the bank after adjustment to pass bank validation rules. | [optional]
 **last_status_update** | **chrono::DateTime<chrono::FixedOffset>** | The date and time of the last time the `status` was updated, in IS0 8601 format | 
-**schedule** | Option<[**models::ExternalPaymentScheduleGet**](ExternalPaymentScheduleGet.md)> |  | 
+**schedule** | Option<[**models::ExternalPaymentScheduleGet**](ExternalPaymentScheduleGet.md)> |  | [optional]
 **refund_details** | Option<[**models::ExternalPaymentRefundDetails**](ExternalPaymentRefundDetails.md)> |  | [optional]
 **bacs** | Option<[**models::SenderBacsNullable**](SenderBACSNullable.md)> |  | 
 **iban** | Option<**String**> | The International Bank Account Number (IBAN) for the sender, if specified in the `/payment_initiation/payment/create` call. | 
-**emi_account_id** | Option<**String**> | The EMI (E-Money Institution) account that this payment is associated with, if any. This EMI account is used as an intermediary account to enable Plaid to reconcile the settlement of funds for Payment Initiation requests. | [optional]
+**refund_ids** | Option<**Vec<String>**> | Refund IDs associated with the payment. | [optional]
+**amount_refunded** | Option<[**models::PaymentAmountRefunded**](PaymentAmountRefunded.md)> |  | [optional]
+**wallet_id** | Option<**String**> | The EMI (E-Money Institution) wallet that this payment is associated with, if any. This wallet is used as an intermediary account to enable Plaid to reconcile the settlement of funds for Payment Initiation requests. | [optional]
+**scheme** | Option<[**models::PaymentScheme**](PaymentScheme.md)> |  | [optional]
+**adjusted_scheme** | Option<[**models::PaymentScheme**](PaymentScheme.md)> |  | [optional]
+**consent_id** | Option<**String**> | The payment consent ID that this payment was initiated with. Is present only when payment was initiated using the payment consent. | [optional]
+**transaction_id** | Option<**String**> | The transaction ID that this payment is associated with, if any. This is present only when a payment was initiated using virtual accounts. | [optional]
+**end_to_end_id** | Option<**String**> | A unique identifier assigned by Plaid to each payment for tracking and reconciliation purposes.  Note: Not all banks handle `end_to_end_id` consistently. To ensure accurate matching, clients should convert both the incoming `end_to_end_id` and the one provided by Plaid to the same case (either lower or upper) before comparison. For virtual account payments, Plaid manages this field automatically. | [optional]
+**error** | Option<[**models::PlaidError**](PlaidError.md)> |  | [optional]
 **request_id** | **String** | A unique identifier for the request, which can be used for troubleshooting. This identifier, like all Plaid identifiers, is case sensitive. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

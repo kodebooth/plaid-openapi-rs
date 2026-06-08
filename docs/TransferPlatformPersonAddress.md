@@ -1,0 +1,16 @@
+# TransferPlatformPersonAddress
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**city** | **String** | The full city name. | 
+**country** | **String** | Valid, capitalized, two-letter ISO code representing the country of this object. Must be in ISO 3166-1 alpha-2 form. | 
+**postal_code** | **String** | The postal code of the address. | 
+**region** | **String** | An ISO 3166-2 subdivision code. Related terms would be \"state\", \"province\", \"prefecture\", \"zone\", \"subdivision\", etc. | 
+**street** | **String** | The primary street portion of an address. A string with at least one non-whitespace alphabetical character, with a max length of 80 characters. | 
+**street2** | Option<**String**> | Extra street information, like an apartment or suite number. If provided, a string with at least one non-whitespace character, with a max length of 50 characters. | [optional]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
