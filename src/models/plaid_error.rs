@@ -33,7 +33,7 @@ pub struct PlaidError {
     pub request_id: Option<String>,
     /// In this product, a request can pertain to more than one Item. If an error is returned for such a request, `causes` will return an array of errors containing a breakdown of these errors on the individual Item level, if any can be identified.  `causes` will be provided for the `error_type` `ASSET_REPORT_ERROR` or `CHECK_REPORT_ERROR`. `causes` will also not be populated inside an error nested within a `warning` object.
     #[serde(rename = "causes", skip_serializing_if = "Option::is_none")]
-    pub causes: Option<Vec<serde_json::Value>>,
+    pub causes: Option<Vec<String>>,
     /// The HTTP status code associated with the error. This will only be returned in the response body when the error information is provided via a webhook.
     #[serde(rename = "status", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
     pub status: Option<Option<i32>>,

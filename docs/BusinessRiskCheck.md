@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | [**models::BusinessVerificationStatusRiskCheck**](BusinessVerificationStatusRiskCheck.md) |  | 
+**status** | [**models::BusinessVerificationStatusKybCheck**](BusinessVerificationStatusKYBCheck.md) |  | 
 **score** | **i32** | A score from 0 to 100 indicating the risk assessment for the business | 
 **industry_prediction** | Option<[**models::BusinessIndustryPredictionNullable**](BusinessIndustryPredictionNullable.md)> |  | 
 

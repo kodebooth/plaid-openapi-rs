@@ -15,7 +15,7 @@
 | It | IT |
 | Pl | PL |
 | Dk | DK |
-| No | NO |
+| False | false |
 | Se | SE |
 | Ee | EE |
 | Lt | LT |

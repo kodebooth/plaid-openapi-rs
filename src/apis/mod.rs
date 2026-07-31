@@ -139,24 +139,4 @@ impl Api for ApiClient {
     }
 }
 
-#[cfg(feature = "mockall")]
-pub struct MockApiClient {
-    pub plaid_api_mock: plaid_api::MockPlaidApi,
-}
-
-#[cfg(feature = "mockall")]
-impl MockApiClient {
-    pub fn new() -> Self {
-        Self {
-            plaid_api_mock: plaid_api::MockPlaidApi::new(),
-        }
-    }
-}
-
-#[cfg(feature = "mockall")]
-impl Api for MockApiClient {
-    fn plaid_api(&self) -> &dyn plaid_api::PlaidApi {
-        &self.plaid_api_mock
-    }
-}
 

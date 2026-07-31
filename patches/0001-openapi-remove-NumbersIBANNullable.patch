@@ -1,38 +1,5 @@
-From 68cabd8a55128c29f6e7460d9bb14153348250c5 Mon Sep 17 00:00:00 2001
-From: Abe Kohandel <abe@kodebooth.com>
-Date: Mon, 8 Jun 2026 06:59:35 -0700
-Subject: [PATCH] openapi: remove NumbersIBANNullable
-
-The Rust OpenAPI generator seems to not handle the NumbersIBANNullable
-correctly. It resolves the NumbersIBAN correctly to just a String and
-uses that as the model. However, it doesn't seem to resolve the nullable
-version correctly. It doesn't generate a Rust model but leaves
-references to it in the other models.
-
-Signed-off-by: Abe Kohandel <abe@kodebooth.com>
----
- 2020-09-14.yml | 10 ++--------
- 1 file changed, 2 insertions(+), 8 deletions(-)
-
-diff --git a/2020-09-14.yml b/2020-09-14.yml
-index 40e76f98c74e..1e64c2027d33 100644
---- a/2020-09-14.yml
-+++ b/2020-09-14.yml
-@@ -29010,12 +29010,6 @@ components:
-       description: International Bank Account Number (IBAN).
-       minLength: 15
-       maxLength: 34
--    NumbersIBANNullable:
--      type: string
--      description: International Bank Account Number (IBAN).
--      nullable: true
--      allOf:
--      - $ref: '#/components/schemas/NumbersIBAN'
-     InvestmentsAuthGetNumbers:
+@@ -8636,7 +8636,7 @@ 
        type: object
-       additionalProperties: true
-@@ -30405,7 +30399,7 @@ components:
-       nullable: true
        properties:
          iban:
 -          $ref: '#/components/schemas/NumbersIBANNullable'
@@ -40,15 +7,3 @@ index 40e76f98c74e..1e64c2027d33 100644
          bic:
            type: string
            description: Bank identifier code (BIC) for this counterparty.
-@@ -32574,7 +32568,7 @@ components:
-         bacs:
-           $ref: '#/components/schemas/PaymentInitiationOptionalRestrictionBacs'
-         iban:
--          $ref: '#/components/schemas/NumbersIBANNullable'
-+          $ref: '#/components/schemas/NumbersIBAN'
-     PaymentConsentMaxPaymentAmount:
-       description: Maximum amount of a single payment initiated using the payment consent.
-       allOf:
--- 
-2.43.0
-

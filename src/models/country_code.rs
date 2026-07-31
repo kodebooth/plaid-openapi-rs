@@ -37,8 +37,8 @@ pub enum CountryCode {
     Pl,
     #[serde(rename = "DK")]
     Dk,
-    #[serde(rename = "NO")]
-    No,
+    #[serde(rename = "false")]
+    False,
     #[serde(rename = "SE")]
     Se,
     #[serde(rename = "EE")]
@@ -72,7 +72,7 @@ impl std::fmt::Display for CountryCode {
             Self::It => write!(f, "IT"),
             Self::Pl => write!(f, "PL"),
             Self::Dk => write!(f, "DK"),
-            Self::No => write!(f, "NO"),
+            Self::False => write!(f, "false"),
             Self::Se => write!(f, "SE"),
             Self::Ee => write!(f, "EE"),
             Self::Lt => write!(f, "LT"),

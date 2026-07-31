@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **grant_type** | [**models::OAuthGrantType**](OAuthGrantType.md) |  | 
 **client_id** | Option<**String**> | Your Plaid API `client_id`. The `client_id` is required and may be provided either in the `PLAID-CLIENT-ID` header or as part of a request body. | [optional]
-**client_secret** | Option<**String**> | Your Plaid API `secret`. The `secret` is required and may be provided either in the `PLAID-SECRET` header or as part of a request body as either `secret` or `client_secret`. | [optional]
-**secret** | Option<**String**> | Your Plaid API `secret`. The `secret` is required and may be provided either in the `PLAID-SECRET` header or as part of a request body as either `secret` or `client_secret`. | [optional]
+**client_secret** | Option<**String**> | Your Plaid API `secret`. The `secret` is required and may be provided either in the `PLAID-SECRET` header or as part of a request body. | [optional]
+**secret** | Option<**String**> | Your Plaid API `secret`. The `secret` is required and may be provided either in the `PLAID-SECRET` header or as part of a request body. | [optional]
 **scope** | Option<**String**> | A JSON string containing a space-separated list of scopes associated with this token, in the format described in [https://datatracker.ietf.org/doc/html/rfc6749#section-3.3](https://datatracker.ietf.org/doc/html/rfc6749#section-3.3). Currently accepted values are:  `user:read` allows reading user data. `user:write` allows writing user data. `exchange` allows exchanging a token using the `urn:plaid:params:oauth:user-token` grant type. `mcp:dashboard` allows access to the MCP dashboard server. | [optional]
 **refresh_token** | Option<**String**> | Refresh token for OAuth | [optional]
 **resource** | Option<**String**> | URI of the target resource server | [optional]

@@ -66,8 +66,8 @@ impl LinkTokenCreateRequestAuth {
 /// Specifies what type of [Reroute to Credentials](https://plaid.com/docs/auth/coverage/flow-options/#removing-manual-verification-entry-points-with-reroute-to-credentials) pane should be used in the Link session for the Same Day Micro-deposits flow. Default behavior is `OPTIONAL`.
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
 pub enum RerouteToCredentials {
-    #[serde(rename = "OFF")]
-    Off,
+    #[serde(rename = "false")]
+    False,
     #[serde(rename = "OPTIONAL")]
     Optional,
     #[serde(rename = "FORCED")]
@@ -76,7 +76,7 @@ pub enum RerouteToCredentials {
 
 impl Default for RerouteToCredentials {
     fn default() -> RerouteToCredentials {
-        Self::Off
+        Self::False
     }
 }
 /// This field has been deprecated in favor of `auth_type_select_enabled`.

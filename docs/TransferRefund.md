@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Plaid’s unique identifier for a refund. | 
-**transfer_id** | **String** | The ID of the transfer to refund. | 
+**transfer_id** | **String** | Plaid’s unique identifier for a transfer. | 
 **amount** | **String** | The amount of the refund (decimal string with two digits of precision e.g. \"10.00\"). | 
 **status** | [**models::TransferRefundStatus**](TransferRefundStatus.md) |  | 
 **failure_reason** | Option<[**models::TransferRefundFailure**](TransferRefundFailure.md)> |  | 

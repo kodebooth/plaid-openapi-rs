@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | ID of the associated entity program. | 
-**created_at** | **chrono::DateTime<chrono::FixedOffset>** | An ISO8601 formatted timestamp. | 
+**created_at** | **chrono::DateTime<chrono::FixedOffset>** | ISO 8601 date-time in format 'YYYY-MM-DDThh:mm:ss.nnn[Z|[+|-]hh:mm]' according to [IETF RFC3339](https://xml2rfc.tools.ietf.org/public/rfc/html/rfc3339.html#anchor14) | 
 **is_rescanning_enabled** | **bool** | Indicator specifying whether the program is enabled and will perform daily rescans. | 
 **lists_enabled** | [**HashSet<models::EntityWatchlistCode>**](EntityWatchlistCode.md) | Watchlists enabled for the associated program | 
 **name** | **String** | A name for the entity program to define its purpose. For example, \"High Risk Organizations\" or \"Applicants\". | 
